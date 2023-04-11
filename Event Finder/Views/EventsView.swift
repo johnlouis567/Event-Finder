@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct EventsView: View {
+    @StateObject var eventsSummary = EventsSummary()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(eventsSummary.events) { event in
+            Text(event.name)
+        }
+        .task {
+            await self.eventsSummary.fetchEvents()
+        }
+        .refreshable {
+            await self.eventsSummary.fetchEvents()
+        }
     }
 }
 
-struct EventsView_Previews: PreviewProvider {
+/*struct EventsView_Previews: PreviewProvider {
     static var previews: some View {
         EventsView()
     }
-}
+}*/

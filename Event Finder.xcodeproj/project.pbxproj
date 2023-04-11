@@ -11,6 +11,13 @@
 		520647B729E4802B00B012AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647B629E4802B00B012AE /* ContentView.swift */; };
 		520647B929E4802C00B012AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520647B829E4802C00B012AE /* Assets.xcassets */; };
 		520647BC29E4802C00B012AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520647BB29E4802C00B012AE /* Preview Assets.xcassets */; };
+		520647C729E4967A00B012AE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647C629E4967A00B012AE /* Event.swift */; };
+		520647CC29E4BBB000B012AE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647CB29E4BBB000B012AE /* ViewModel.swift */; };
+		520647CE29E4C4BA00B012AE /* EventsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647CD29E4C4BA00B012AE /* EventsSummary.swift */; };
+		520647D129E4CA8D00B012AE /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D029E4CA8D00B012AE /* EventsView.swift */; };
+		520647D429E5922E00B012AE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D329E5922E00B012AE /* Image.swift */; };
+		520647D629E592C100B012AE /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D529E592C100B012AE /* Sale.swift */; };
+		520647D829E59C3100B012AE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D729E59C3100B012AE /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,14 @@
 		520647B829E4802C00B012AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520647BB29E4802C00B012AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		520647BD29E4802C00B012AE /* Event_Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Event_Finder.entitlements; sourceTree = "<group>"; };
+		520647C629E4967A00B012AE /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		520647CB29E4BBB000B012AE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		520647CD29E4C4BA00B012AE /* EventsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSummary.swift; sourceTree = "<group>"; };
+		520647D029E4CA8D00B012AE /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		520647D229E5747E00B012AE /* Event-Finder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Event-Finder-Info.plist"; sourceTree = SOURCE_ROOT; };
+		520647D329E5922E00B012AE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		520647D529E592C100B012AE /* Sale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
+		520647D729E59C3100B012AE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +67,11 @@
 		520647B329E4802B00B012AE /* Event Finder */ = {
 			isa = PBXGroup;
 			children = (
+				520647D229E5747E00B012AE /* Event-Finder-Info.plist */,
+				520647C329E495EC00B012AE /* Data Models */,
+				520647CA29E4BB9000B012AE /* View Models */,
+				520647CF29E4CA5F00B012AE /* Views */,
 				520647B429E4802B00B012AE /* Event_FinderApp.swift */,
-				520647B629E4802B00B012AE /* ContentView.swift */,
 				520647B829E4802C00B012AE /* Assets.xcassets */,
 				520647BD29E4802C00B012AE /* Event_Finder.entitlements */,
 				520647BA29E4802C00B012AE /* Preview Content */,
@@ -67,6 +85,35 @@
 				520647BB29E4802C00B012AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		520647C329E495EC00B012AE /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				520647D729E59C3100B012AE /* Data.swift */,
+				520647CD29E4C4BA00B012AE /* EventsSummary.swift */,
+				520647C629E4967A00B012AE /* Event.swift */,
+				520647D329E5922E00B012AE /* Image.swift */,
+				520647D529E592C100B012AE /* Sale.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		520647CA29E4BB9000B012AE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				520647CB29E4BBB000B012AE /* ViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		520647CF29E4CA5F00B012AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				520647B629E4802B00B012AE /* ContentView.swift */,
+				520647D029E4CA8D00B012AE /* EventsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520647CC29E4BBB000B012AE /* ViewModel.swift in Sources */,
+				520647D629E592C100B012AE /* Sale.swift in Sources */,
+				520647D429E5922E00B012AE /* Image.swift in Sources */,
+				520647D129E4CA8D00B012AE /* EventsView.swift in Sources */,
+				520647C729E4967A00B012AE /* Event.swift in Sources */,
+				520647CE29E4C4BA00B012AE /* EventsSummary.swift in Sources */,
 				520647B729E4802B00B012AE /* ContentView.swift in Sources */,
+				520647D829E59C3100B012AE /* Data.swift in Sources */,
 				520647B529E4802B00B012AE /* Event_FinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +326,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Event Finder/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Event-Finder-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +352,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Event Finder/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Event-Finder-Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

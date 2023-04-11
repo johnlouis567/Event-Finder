@@ -6,3 +6,23 @@
 //
 
 import Foundation
+
+struct Event: Identifiable, Codable {
+    let id: String
+    var name: String // Ex: "BEYONC\u00c9 - RENAISSANCE WORLD TOUR"
+    var type: String // Ex: "event"
+    var test: Bool
+    var url: String
+    var locale: String // Ex: "en-us"
+    // Below here is experimental
+//    var images: [Image]
+    // TODO: Implement "sales"
+    // TODO: Implement "dates"
+    // TODO: Implement "classifications"
+    // TODO: Implement "promoter"
+    // TODO: Implement "priceRanges"
+    // TODO: Implement "seatmap"
+    // TODO: Implement "ageRestrictions"
+    // TODO: Implement "_links"
+    // TODO: Implement "_embedded"
+}

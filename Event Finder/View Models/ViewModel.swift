@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class ViewModel {
+    /*var dataCollector = DataCollector()
+    let collectedData = DataCollector.fetchEvents(<#T##self: DataCollector##DataCollector#>)*/
+}
