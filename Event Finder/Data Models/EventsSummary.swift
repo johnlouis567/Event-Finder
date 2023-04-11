@@ -33,14 +33,4 @@ class EventsSummary: ObservableObject {
             debugPrint("Error loading \(String(describing: url)): \(String(describing: error))")
         }
     }
-    
-    /*func fetchEvents() -> [Event] {
-        Task {
-            do {
-                await fetchEvents()
-            } catch {
-                print(error)
-            }
-        }
-    }*/
 }
