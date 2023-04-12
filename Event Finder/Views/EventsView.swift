@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject var eventsSummary = EventsSummary()
+    var data: Data
     
     var body: some View {
-        List(eventsSummary.events) { event in
+        List(data.events) { event in
             Text(event.name)
         }
         .task {
-            await self.eventsSummary.fetchEvents()
+            await self.data.fetchEvents()
         }
         .refreshable {
-            await self.eventsSummary.fetchEvents()
+            await self.data.fetchEvents()
         }
     }
 }

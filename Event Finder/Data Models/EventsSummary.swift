@@ -9,28 +9,6 @@
 
 import Foundation
 
-@MainActor
-class EventsSummary: ObservableObject {
-    @Published var events: [Event] = []
-    let apiKey = "5f3VlQegvbNmEFdPG3AUHB9FFTRswMDX"
-    
-    func fetchEvents() async {
-        let url = URL(string: "https://app.ticketmaster.com/discovery/v2/events?apikey=\(apiKey)")
-        
-        // Unwrap the url to make sure that it is not null
-        guard let unwrappedUrl = url else {
-            // TODO: Implelemnt an error
-            print("There was an error unwrapping the URL")
-            return
-        }
-        
-        let session = URLSession.shared
-        do {
-            let (data, _) = try await session.data(from: unwrappedUrl)
-            let decoder = JSONDecoder()
-            self.events = try decoder.decode([Event].self, from: data)
-        } catch {
-            debugPrint("Error loading \(String(describing: url)): \(String(describing: error))")
-        }
-    }
+struct EventsSummary: Codable {
+    var events: [Event] = []
 }
