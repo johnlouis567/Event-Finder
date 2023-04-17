@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            EventsView(data: data)
+            EventsView(data: data, events: $data.events)
         }
         .padding()
     }

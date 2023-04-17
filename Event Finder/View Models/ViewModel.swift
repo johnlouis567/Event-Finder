@@ -8,8 +8,5 @@
 import Foundation
 
 class ViewModel {
-    var data: [String : [Event]] = [:]
-    var eventSummary = EventsSummary()
-    
     
 }

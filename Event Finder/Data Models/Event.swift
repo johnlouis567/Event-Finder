@@ -7,22 +7,20 @@
 
 import Foundation
 
-struct Event: Identifiable, Codable {
+struct Event: Identifiable, Codable, Hashable {
+    
     let id: String
     var name: String // Ex: "BEYONC\u00c9 - RENAISSANCE WORLD TOUR"
     var type: String // Ex: "event"
     var test: Bool
     var url: String
     var locale: String // Ex: "en-us"
-    // Below here is experimental
 //    var images: [Image]
-    // TODO: Implement "sales"
-    // TODO: Implement "dates"
-    // TODO: Implement "classifications"
-    // TODO: Implement "promoter"
-    // TODO: Implement "priceRanges"
-    // TODO: Implement "seatmap"
-    // TODO: Implement "ageRestrictions"
-    // TODO: Implement "_links"
-    // TODO: Implement "_embedded"
+//    var priceRanges: [priceRange]
+//    var dates: Dates
+    
+    // Two Events are the same event if the id is the same
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

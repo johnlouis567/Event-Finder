@@ -9,7 +9,8 @@ import Foundation
 
 @MainActor
 class Data: ObservableObject {
-    var _embedded: [String : Any] = [:]
+    var embeddedData = EmbeddedData()
+    // TODO: Do this in a more SWIFTY way using the data model
     @Published var events: [Event] = []
     
     let apiKey = "5f3VlQegvbNmEFdPG3AUHB9FFTRswMDX"
@@ -28,16 +29,35 @@ class Data: ObservableObject {
         do {
             let (data, _) = try await session.data(from: unwrappedUrl)
             let decoder = JSONDecoder()
-            self._embedded = try decoder.decode([String : [Event]].self, from: data)
+            embeddedData.self = try decoder.decode(EmbeddedData.self, from: data)
+            
+            // Create an eventsList array so that it updates all at once instead of piece by piece
+            var eventsList: [Event] = []
+            
             
             // Generate the list of events ffrom the _embedded file
-            for (key, value) in _embedded {
-                if key == "events" {
-                    self.events = value
-                }
+            for event in embeddedData._embedded.events {
+                eventsList.append(event)
             }
+        
+            self.events = eventsList
         } catch {
             debugPrint("Error loading \(String(describing: url)): \(String(describing: error))")
         }
     }
 }
+
+
+
+
+// TASK from async await:
+// JUST FOR FUTURE REFERENCE IN CASE I HAVE TO CHANGE ASYNC FUNC
+
+/*Task {
+     do {
+         thing = await asyncFunc();
+     } catch {
+         print(error)
+     }
+ }*/
+ 

@@ -9,6 +9,6 @@
 
 import Foundation
 
-struct EventsSummary: Codable {
+/*struct EventsSummary: Codable {
     var events: [Event] = []
-}
+}*/
