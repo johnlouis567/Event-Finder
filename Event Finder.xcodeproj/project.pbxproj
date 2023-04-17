@@ -17,6 +17,15 @@
 		520647D129E4CA8D00B012AE /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D029E4CA8D00B012AE /* EventsView.swift */; };
 		520647D429E5922E00B012AE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D329E5922E00B012AE /* Image.swift */; };
 		520647D629E592C100B012AE /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D529E592C100B012AE /* Sale.swift */; };
+		520647DA29E5A59100B012AE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647D929E5A59100B012AE /* Data.swift */; };
+		520647DC29E7670C00B012AE /* DataLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647DB29E7670C00B012AE /* DataLink.swift */; };
+		520647E029E76DA300B012AE /* EmbeddedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647DF29E76DA300B012AE /* EmbeddedData.swift */; };
+		520647E229E76EF400B012AE /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647E129E76EF400B012AE /* Events.swift */; };
+		520647E429ECF50700B012AE /* priceRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647E329ECF50700B012AE /* priceRange.swift */; };
+		520647E629ECFD4B00B012AE /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647E529ECFD4B00B012AE /* Dates.swift */; };
+		520647E829ECFDF700B012AE /* DateInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647E729ECFDF700B012AE /* DateInformation.swift */; };
+		520647EA29ECFE6A00B012AE /* StartDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647E929ECFE6A00B012AE /* StartDate.swift */; };
+		520647EC29ED0FA000B012AE /* EventSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520647EB29ED0FA000B012AE /* EventSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +42,15 @@
 		520647D229E5747E00B012AE /* Event-Finder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Event-Finder-Info.plist"; sourceTree = SOURCE_ROOT; };
 		520647D329E5922E00B012AE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		520647D529E592C100B012AE /* Sale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
+		520647D929E5A59100B012AE /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		520647DB29E7670C00B012AE /* DataLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLink.swift; sourceTree = "<group>"; };
+		520647DF29E76DA300B012AE /* EmbeddedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedData.swift; sourceTree = "<group>"; };
+		520647E129E76EF400B012AE /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		520647E329ECF50700B012AE /* priceRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = priceRange.swift; sourceTree = "<group>"; };
+		520647E529ECFD4B00B012AE /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		520647E729ECFDF700B012AE /* DateInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInformation.swift; sourceTree = "<group>"; };
+		520647E929ECFE6A00B012AE /* StartDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartDate.swift; sourceTree = "<group>"; };
+		520647EB29ED0FA000B012AE /* EventSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +106,18 @@
 		520647C329E495EC00B012AE /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				520647D929E5A59100B012AE /* Data.swift */,
+				520647DF29E76DA300B012AE /* EmbeddedData.swift */,
+				520647E129E76EF400B012AE /* Events.swift */,
 				520647CD29E4C4BA00B012AE /* EventsSummary.swift */,
 				520647C629E4967A00B012AE /* Event.swift */,
+				520647E529ECFD4B00B012AE /* Dates.swift */,
+				520647E729ECFDF700B012AE /* DateInformation.swift */,
+				520647E929ECFE6A00B012AE /* StartDate.swift */,
+				520647E329ECF50700B012AE /* priceRange.swift */,
 				520647D329E5922E00B012AE /* Image.swift */,
 				520647D529E592C100B012AE /* Sale.swift */,
+				520647DB29E7670C00B012AE /* DataLink.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -109,6 +135,7 @@
 			children = (
 				520647B629E4802B00B012AE /* ContentView.swift */,
 				520647D029E4CA8D00B012AE /* EventsView.swift */,
+				520647EB29ED0FA000B012AE /* EventSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,14 +210,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520647E229E76EF400B012AE /* Events.swift in Sources */,
+				520647E829ECFDF700B012AE /* DateInformation.swift in Sources */,
 				520647CC29E4BBB000B012AE /* ViewModel.swift in Sources */,
 				520647D629E592C100B012AE /* Sale.swift in Sources */,
 				520647D429E5922E00B012AE /* Image.swift in Sources */,
+				520647E029E76DA300B012AE /* EmbeddedData.swift in Sources */,
+				520647EA29ECFE6A00B012AE /* StartDate.swift in Sources */,
 				520647D129E4CA8D00B012AE /* EventsView.swift in Sources */,
 				520647C729E4967A00B012AE /* Event.swift in Sources */,
 				520647CE29E4C4BA00B012AE /* EventsSummary.swift in Sources */,
 				520647B729E4802B00B012AE /* ContentView.swift in Sources */,
+				520647E429ECF50700B012AE /* priceRange.swift in Sources */,
+				520647DA29E5A59100B012AE /* Data.swift in Sources */,
+				520647EC29ED0FA000B012AE /* EventSelectionView.swift in Sources */,
+				520647E629ECFD4B00B012AE /* Dates.swift in Sources */,
 				520647B529E4802B00B012AE /* Event_FinderApp.swift in Sources */,
+				520647DC29E7670C00B012AE /* DataLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

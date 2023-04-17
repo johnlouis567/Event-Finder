@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject var eventsSummary = EventsSummary()
+//    var data: Data
+    var events: [Event]
     
     var body: some View {
-        List(eventsSummary.events) { event in
-            Text(event.name)
-        }
-        .task {
-            await self.eventsSummary.fetchEvents()
-        }
-        .refreshable {
-            await self.eventsSummary.fetchEvents()
+        HStack {
+            List(events) { event in
+                Text(event.name)
+                    .multilineTextAlignment(.center)
+                    .font(.largeTitle)
+                Text("Event Date: 01/11/2023")
+                Text("Price range: $55 - $678")
+                Text("Event Location: " + event.locale)
+                Text(event.url)
+                    .foregroundColor(.blue)
+                Divider()
+            }
+            /*.task {
+                await self.data.fetchEvents()
+            }*/
+            /*.refreshable {
+                await self.data.fetchEvents()
+            }*/
+            /*VStack {
+                Button("Populate Events") {
+                    Task {
+                        await self.data.fetchEvents()
+                    }
+                }
+                // TODO: Implement a button to refresh events?
+                Button("Clear Events") {
+                    events = []
+                }
+            }*/
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Image: Codable {
+struct Image: Codable, Hashable {
     var ratio: String
     var url: String
     var width: Int

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var data = Data()
+    
     var body: some View {
         VStack {
-            EventsView()
+            EventsView(data: data, events: $data.events)
         }
         .padding()
     }
